@@ -1,0 +1,46 @@
+{
+    "header": {
+        "home": "Inicio",
+        "about": "Sobre Mí",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy",
+        "role": "Desarrollador Full Stack y Analista de Redes",
+        "description": "Especialista en transformar reglas de negocio complejas en soluciones de software robustas. Centrado en la seguridad, el rendimiento y la experiencia del usuario.",
+        "viewProjects": "Ver Proyectos",
+        "contactMe": "Ponerse en Contacto"
+    },
+    "about": {
+        "title": "Sobre Mí",
+        "experience": "Experiencia Profesional",
+        "devRole": "Desarrollador Full Stack",
+        "current": "LBR.IT • Desde Diciembre de 2022",
+        "devDesc": "Responsable de los módulos agrícola y ganadero del software Agrix. Desarrollo basado en reglas de negocio complejas para la gestión agropecuaria.",
+        "netRole": "Analista de Redes",
+        "netExp": "2 Años de Experiencia",
+        "netDesc": "Gestión y mantenimiento de infraestructura de redes, garantizando estabilidad y seguridad.",
+        "education": "Formación Académica",
+        "eduTitle": "Ciberseguridad",
+        "eduDesc": "Graduado con enfoque en seguridad de la información.",
+        "tccTitle": "Trabajo de Fin de Grado (TCC)",
+        "tccName": "\"Análisis de Ejecutables para Principiantes: Una Introducción a la Ingeniería Inversa\"",
+        "tccDesc": "Un estudio profundo sobre técnicas de ingeniería inversa dirigido a fines educativos y de seguridad.",
+        "readTcc": "Leer TCC (PDF)",
+        "languages": "Idiomas",
+        "langDesc": "Portugués (Nativo), Inglés (Básico), Español (Básico)"
+    },
+    "projects": {
+        "title": "Mis Proyectos",
+        "viewProject": "Ver Proyecto",
+        "agrixDesc": "Software de gestión agropecuaria. Actúo como responsable de los módulos agrícola y ganadero, implementando reglas de negocio críticas para el sector.",
+        "debtDesc": "Sistema de control y gestión de deudas desarrollado en colaboración con RomeraSCR. Permite la gestión de cuentas y control de cuotas."
+    },
+    "footer": {
+        "title": "¿Hablamos?",
+        "description": "Siempre estoy abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente o simplemente quieres charlar, ¡contáctame!",
+        "sendEmail": "Enviar Email",
+        "rights": "Todos los derechos reservados."
+    }
+}

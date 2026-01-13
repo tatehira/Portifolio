@@ -1,0 +1,46 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "role": "Desenvolvedor Full Stack & Analista de Redes",
+    "description": "Especialista em transformar regras de negócio complexas em soluções de software robustas. Focado em segurança, performance e experiência do usuário.",
+    "viewProjects": "Ver Projetos",
+    "contactMe": "Entre em Contato"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "experience": "Experiência Profissional",
+    "devRole": "Desenvolvedor Full Stack",
+    "current": "LBR.IT • Desde Dezembro de 2022",
+    "devDesc": "Responsável pelos módulos agrícola e pecuária do software Agrix. Desenvolvimento baseado em regras de negócio complexas para gestão agropecuária.",
+    "netRole": "Analista de Redes",
+    "netExp": "2 Anos de Experiência",
+    "netDesc": "Gestão e manutenção de infraestrutura de redes, garantindo estabilidade e segurança.",
+    "education": "Formação Acadêmica",
+    "eduTitle": "Cyber Segurança",
+    "eduDesc": "Graduado com foco em segurança da informação.",
+    "tccTitle": "Trabalho de Conclusão de Curso (TCC)",
+    "tccName": "\"Análise de Executáveis para Iniciantes: Uma Introdução à Engenharia Reversa\"",
+    "tccDesc": "Um estudo aprofundado sobre técnicas de engenharia reversa voltado para fins educacionais e de segurança.",
+    "readTcc": "Ler TCC (PDF)",
+    "languages": "Idiomas",
+    "langDesc": "Português (Nativo), Inglês (Básico), Espanhol (Básico)"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "viewProject": "Ver Projeto",
+    "agrixDesc": "Software de gestão agropecuária. Atuo como responsável pelos módulos agrícola e pecuária, implementando regras de negócio críticas para o setor.",
+    "debtDesc": "Sistema de controle e gestão de dívidas desenvolvido em parceria com RomeraSCR. Permite gerenciamento de contas e controle de parcelas."
+  },
+  "footer": {
+    "title": "Vamos Conversar?",
+    "description": "Estou sempre aberto a novas oportunidades e parcerias. Se você tem um projeto em mente ou quer apenas trocar uma ideia, entre em contato!",
+    "sendEmail": "Enviar Email",
+    "rights": "Todos os direitos reservados."
+  }
+}

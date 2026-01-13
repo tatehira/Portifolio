@@ -1,0 +1,46 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, I am",
+        "role": "Full Stack Developer & Network Analyst",
+        "description": "Specialist in transforming complex business rules into robust software solutions. Focused on security, performance, and user experience.",
+        "viewProjects": "View Projects",
+        "contactMe": "Get in Touch"
+    },
+    "about": {
+        "title": "About Me",
+        "experience": "Professional Experience",
+        "devRole": "Full Stack Developer",
+        "current": "LBR.IT • Since December 2022",
+        "devDesc": "Responsible for the agricultural and livestock modules of the Agrix software. Development based on complex business rules for agricultural management.",
+        "netRole": "Network Analyst",
+        "netExp": "2 Years of Experience",
+        "netDesc": "Management and maintenance of network infrastructure, ensuring stability and security.",
+        "education": "Education",
+        "eduTitle": "Cyber Security",
+        "eduDesc": "Graduated with a focus on information security.",
+        "tccTitle": "Course Completion Work (TCC)",
+        "tccName": "\"Executable Analysis for Beginners: An Introduction to Reverse Engineering\"",
+        "tccDesc": "An in-depth study on reverse engineering techniques aimed at educational and security purposes.",
+        "readTcc": "Read TCC (PDF)",
+        "languages": "Languages",
+        "langDesc": "Portuguese (Native), English (Basic), Spanish (Basic)"
+    },
+    "projects": {
+        "title": "My Projects",
+        "viewProject": "View Project",
+        "agrixDesc": "Agricultural management software. I act as responsible for agricultural and livestock modules, implementing critical business rules for the sector.",
+        "debtDesc": "Debt control and management system developed in partnership with RomeraSCR. Allows account management and installment control."
+    },
+    "footer": {
+        "title": "Let's Talk?",
+        "description": "I am always open to new opportunities and partnerships. If you have a project in mind or just want to chat, get in touch!",
+        "sendEmail": "Send Email",
+        "rights": "All rights reserved."
+    }
+}
