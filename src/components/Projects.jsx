@@ -5,10 +5,10 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "Agrix - LBR.IT",
+            title: "Agrix - Pecuária",
             description: t('projects.agrixDesc'),
             role: t('about.devRole'),
-            link: "https://lbrit.com.br/",
+            link: "https://lbrit.com.br/agrix-gestao-agro/#modulos-pecuaria",
             tags: ["Gestão Agropecuária", "Regras de Negócio", "Enterprise"]
         },
         {

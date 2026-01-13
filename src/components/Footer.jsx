@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import tatehiraLogo from '../assets/tatehira-dev-logo.png';
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -27,8 +28,13 @@ const Footer = () => {
                 </a>
             </div>
 
-            <div style={{ borderTop: '1px solid #334155', paddingTop: '2rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+            <div style={{ borderTop: '1px solid #334155', paddingTop: '2rem', color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
                 <p>&copy; {new Date().getFullYear()} Nick Tatehira. {t('footer.rights')}</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', opacity: 0.8 }}>
+                    <span>Developed by</span>
+                    <strong style={{ color: 'var(--accent-color)' }}>Tatehira Dev</strong>
+                    <img src={tatehiraLogo} alt="Tatehira Dev Logo" style={{ height: '20px', width: 'auto' }} />
+                </div>
             </div>
         </footer>
     );
