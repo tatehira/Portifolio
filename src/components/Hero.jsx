@@ -18,7 +18,7 @@ const Hero = () => {
                 <div style={{
                     width: '200px',
                     height: '200px',
-                    margin: '0 auto 2rem',
+                    margin: '0 auto 1rem',
                     borderRadius: '50%',
                     overflow: 'hidden',
                     border: '4px solid var(--accent-color)',

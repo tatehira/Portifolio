@@ -7,29 +7,14 @@
   },
   "hero": {
     "greeting": "Olá, eu sou",
-    "role": "Desenvolvedor Full Stack & Analista de Redes",
+    "role": "Desenvolvedor de Software",
     "description": "Especialista em transformar regras de negócio complexas em soluções de software robustas. Focado em segurança, performance e experiência do usuário.",
     "viewProjects": "Ver Projetos",
     "contactMe": "Entre em Contato"
   },
   "about": {
     "title": "Sobre Mim",
-    "experience": "Experiência Profissional",
-    "devRole": "Desenvolvedor Full Stack",
-    "current": "LBR.IT • Desde Dezembro de 2022",
-    "devDesc": "Responsável pelos módulos agrícola e pecuária do software Agrix. Desenvolvimento baseado em regras de negócio complexas para gestão agropecuária.",
-    "netRole": "Analista de Redes",
-    "netExp": "2 Anos de Experiência",
-    "netDesc": "Gestão e manutenção de infraestrutura de redes, garantindo estabilidade e segurança.",
-    "education": "Formação Acadêmica",
-    "eduTitle": "Cyber Segurança",
-    "eduDesc": "Graduado com foco em segurança da informação.",
-    "tccTitle": "Trabalho de Conclusão de Curso (TCC)",
-    "tccName": "\"Análise de Executáveis para Iniciantes: Uma Introdução à Engenharia Reversa\"",
-    "tccDesc": "Um estudo aprofundado sobre técnicas de engenharia reversa voltado para fins educacionais e de segurança.",
-    "readTcc": "Ler TCC (PDF)",
-    "languages": "Idiomas",
-    "langDesc": "Português (Nativo), Inglês (Básico), Espanhol (Básico)"
+    "bio": "Sou um Desenvolvedor Full Stack e Engenheiro de Computação apaixonado por tecnologia. Atuo no desenvolvimento de sistemas corporativos, sempre prezando pela qualidade de código e entrega de valor. Tenho grande interesse em arquitetura de software e gosto de entender como as coisas funcionam nos bastidores, desde o alto nível até a infraestrutura. Além disso, minha experiência em redes complementa minha visão técnica, permitindo criar soluções mais robustas e integradas."
   },
   "projects": {
     "title": "Meus Projetos",
