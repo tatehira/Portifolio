@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import GoldManagement from './pages/GoldManagement';
+import BarberShop from './pages/BarberShop';
 
 const MainContent = () => (
   <>
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/gold-management" element={<GoldManagement />} />
+          <Route path="/barber-shop" element={<BarberShop />} />
         </Routes>
       </div>
     </Router>

@@ -45,6 +45,7 @@ const Projects = () => {
             title: "Sistema de Barbearia",
             description: "Sistema de gestão inteligente para barbearias com automação de comissões, fidelidade de clientes e CMS integrado para criação de landing pages.",
             role: "Full Stack Developer",
+            internalLink: "/barber-shop",
             tags: ["Gestão", "Automação", "CMS", "SaaS"]
         }
     ];
@@ -245,7 +246,15 @@ const Projects = () => {
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                                 {inProgressProjects.map((project, index) => (
                                     <div key={index}
-                                        style={{ ...cardStyle, transition: 'transform 0.3s ease, border-color 0.3s ease' }}
+                                        style={{
+                                            ...cardStyle,
+                                            cursor: (project.externalLink || project.internalLink) ? 'pointer' : 'default',
+                                            transition: 'transform 0.3s ease, border-color 0.3s ease'
+                                        }}
+                                        onClick={() => {
+                                            if (project.internalLink) handleCardClick(project.internalLink, true);
+                                            else handleCardClick(project.externalLink);
+                                        }}
                                         onMouseEnter={handleMouseEnter}
                                         onMouseLeave={handleMouseLeave}
                                     >
