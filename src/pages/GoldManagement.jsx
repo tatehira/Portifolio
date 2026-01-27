@@ -67,16 +67,26 @@ const GoldManagement = () => {
                     onClick={handleBack}
                     style={{
                         background: 'transparent',
-                        border: '1px solid var(--accent-color)',
+                        border: '2px solid var(--accent-color)',
                         color: 'var(--accent-color)',
-                        padding: '0.5rem 1rem',
-                        borderRadius: '0.5rem',
+                        padding: '0.75rem 1.5rem',
+                        borderRadius: '0.75rem',
                         cursor: 'pointer',
                         marginBottom: '2rem',
                         display: 'flex',
                         alignItems: 'center',
                         gap: '0.5rem',
-                        fontSize: '1rem'
+                        fontSize: '1rem',
+                        fontWeight: '700',
+                        transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.background = 'var(--accent-color)';
+                        e.currentTarget.style.color = '#ffffff';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.background = 'transparent';
+                        e.currentTarget.style.color = 'var(--accent-color)';
                     }}
                 >
                     ← Voltar para Projetos

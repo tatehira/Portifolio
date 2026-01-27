@@ -45,7 +45,7 @@ const Projects = () => {
             title: "Sistema de Barbearia",
             description: "Sistema de gestão inteligente para barbearias com automação de comissões, fidelidade de clientes e CMS integrado para criação de landing pages.",
             role: "Full Stack Developer",
-            internalLink: "/barber-shop",
+            externalLink: "https://barber.neonproject.cloud/",
             tags: ["Gestão", "Automação", "CMS", "SaaS"]
         }
     ];
@@ -74,33 +74,44 @@ const Projects = () => {
 
     const cardStyle = {
         background: 'var(--card-bg)',
-        borderRadius: '1rem',
+        borderRadius: '1.25rem',
         overflow: 'hidden',
-        transition: 'transform 0.3s ease',
-        border: '1px solid transparent',
+        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+        border: '1px solid var(--border-color)',
         display: 'flex',
         flexDirection: 'column',
-        height: '100%'
+        height: '100%',
+        position: 'relative',
+        boxShadow: 'var(--shadow-md)'
     };
 
     const tagStyle = {
-        background: 'rgba(56, 189, 248, 0.1)',
+        background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(139, 92, 246, 0.15))',
         color: 'var(--accent-color)',
-        padding: '0.25rem 0.75rem',
+        padding: '0.4rem 1rem',
         borderRadius: '1rem',
-        fontSize: '0.8rem'
+        fontSize: '0.85rem',
+        fontWeight: '500',
+        border: '1px solid rgba(56, 189, 248, 0.2)',
+        transition: 'all 0.3s ease'
     };
 
     const tabButtonStyle = (isActive) => ({
-        padding: '0.75rem 1.5rem',
+        padding: '0.875rem 2rem',
         borderRadius: '2rem',
-        background: isActive ? 'var(--accent-color)' : 'transparent',
-        color: isActive ? '#fff' : 'var(--text-secondary)',
+        background: isActive 
+            ? 'linear-gradient(135deg, #0ea5e9, #38bdf8)' 
+            : 'transparent',
+        color: isActive ? '#ffffff' : 'var(--text-secondary)',
         border: isActive ? 'none' : '1px solid var(--border-color)',
         cursor: 'pointer',
-        fontWeight: '600',
-        transition: 'all 0.3s ease',
-        fontSize: '1rem'
+        fontWeight: '700',
+        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+        fontSize: '1rem',
+        boxShadow: isActive ? '0 4px 15px rgba(56, 189, 248, 0.3)' : 'none',
+        position: 'relative',
+        overflow: 'hidden',
+        textShadow: isActive ? '0 1px 2px rgba(0, 0, 0, 0.2)' : 'none'
     });
 
     const handleCardClick = (link, isInternal = false) => {
@@ -113,13 +124,15 @@ const Projects = () => {
     };
 
     const handleMouseEnter = (e) => {
-        e.currentTarget.style.transform = 'translateY(-10px)';
+        e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
         e.currentTarget.style.borderColor = 'var(--accent-color)';
+        e.currentTarget.style.boxShadow = '0 12px 40px rgba(56, 189, 248, 0.25)';
     };
 
     const handleMouseLeave = (e) => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.borderColor = 'transparent';
+        e.currentTarget.style.transform = 'translateY(0) scale(1)';
+        e.currentTarget.style.borderColor = 'var(--border-color)';
+        e.currentTarget.style.boxShadow = 'var(--shadow-md)';
     };
 
     const renderContent = () => {
@@ -129,31 +142,60 @@ const Projects = () => {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         {experiences.map((exp, index) => (
                             <div key={index}
+                                className="card-hover"
                                 style={{
                                     ...cardStyle,
                                     cursor: exp.link ? 'pointer' : 'default',
-                                    transition: 'transform 0.3s ease, border-color 0.3s ease'
+                                    animation: `fadeIn 0.6s ease-out ${index * 0.1}s both`
                                 }}
                                 onClick={() => handleCardClick(exp.link)}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <div style={{ padding: '2rem' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.5rem' }}>
-                                        <h3 style={{ fontSize: '1.5rem', marginBottom: 0 }}>{exp.company}</h3>
+                                <div style={{ 
+                                    padding: '2.5rem',
+                                    position: 'relative',
+                                    background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                }}>
+                                    <div style={{ 
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        width: '4px',
+                                        height: '100%',
+                                        background: 'linear-gradient(180deg, var(--accent-color), var(--accent-secondary))',
+                                        borderRadius: '0 4px 4px 0'
+                                    }} />
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.75rem', paddingLeft: '1rem' }}>
+                                        <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{exp.company}</h3>
                                         {exp.link && (
-                                            <span style={{ color: 'var(--accent-color)' }}>
+                                            <span style={{ 
+                                                color: 'var(--accent-color)',
+                                                fontSize: '1.5rem',
+                                                transition: 'transform 0.3s ease'
+                                            }}>
                                                 🔗
                                             </span>
                                         )}
                                     </div>
-                                    <p style={{ color: 'var(--accent-color)', fontSize: '1rem', marginBottom: '1rem', fontWeight: '600' }}>
+                                    <p style={{ 
+                                        color: 'var(--accent-color)', 
+                                        fontSize: '1.1rem', 
+                                        marginBottom: '1rem', 
+                                        fontWeight: '600',
+                                        paddingLeft: '1rem'
+                                    }}>
                                         {exp.role}
                                     </p>
-                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                                    <p style={{ 
+                                        color: 'var(--text-secondary)', 
+                                        marginBottom: '1.5rem',
+                                        lineHeight: '1.7',
+                                        paddingLeft: '1rem'
+                                    }}>
                                         {exp.description}
                                     </p>
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', paddingLeft: '1rem' }}>
                                         {exp.tags.map((tag, i) => (
                                             <span key={i} style={tagStyle}>{tag}</span>
                                         ))}
@@ -179,10 +221,11 @@ const Projects = () => {
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                                 {completedProjects.map((project, index) => (
                                     <div key={index}
+                                        className="card-hover"
                                         style={{
                                             ...cardStyle,
                                             cursor: (project.externalLink || project.internalLink) ? 'pointer' : 'default',
-                                            transition: 'transform 0.3s ease, border-color 0.3s ease'
+                                            animation: `fadeIn 0.6s ease-out ${index * 0.1}s both`
                                         }}
                                         onClick={() => {
                                             if (project.internalLink) handleCardClick(project.internalLink, true);
@@ -191,41 +234,52 @@ const Projects = () => {
                                         onMouseEnter={handleMouseEnter}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <div style={{ padding: '2rem', flex: 1 }}>
+                                        <div style={{ 
+                                            padding: '2.5rem', 
+                                            flex: 1,
+                                            background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                        }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                                                <h3 style={{ fontSize: '1.5rem', marginBottom: 0 }}>{project.title}</h3>
+                                                <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{project.title}</h3>
                                                 {(project.externalLink || project.internalLink) && (
-                                                    <span style={{ color: 'var(--accent-color)', fontSize: '1.2rem' }}>
+                                                    <span style={{ 
+                                                        color: 'var(--accent-color)', 
+                                                        fontSize: '1.5rem',
+                                                        transition: 'transform 0.3s ease'
+                                                    }}>
                                                         🔗
                                                     </span>
                                                 )}
                                             </div>
-                                            <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', marginBottom: '1rem', fontWeight: '600' }}>
+                                            <p style={{ color: 'var(--accent-color)', fontSize: '1rem', marginBottom: '1rem', fontWeight: '600' }}>
                                                 {project.role}
                                             </p>
-                                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.7' }}>
                                                 {project.description}
                                             </p>
-                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                                                 {project.tags.map((tag, i) => (
                                                     <span key={i} style={tagStyle}>{tag}</span>
                                                 ))}
                                             </div>
                                         </div>
                                         <div style={{
-                                            padding: '1rem 2rem',
-                                            background: 'rgba(0,0,0,0.2)',
+                                            padding: '1.5rem 2.5rem',
+                                            background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
                                             display: 'flex',
-                                            justifyContent: 'flex-end'
+                                            justifyContent: 'flex-end',
+                                            borderTop: '1px solid var(--border-color)'
                                         }}>
                                             <span style={{
-                                                color: 'var(--text-primary)',
-                                                fontSize: '0.9rem',
+                                                color: 'var(--accent-color)',
+                                                fontSize: '1rem',
                                                 display: 'flex',
                                                 alignItems: 'center',
-                                                gap: '0.5rem'
+                                                gap: '0.5rem',
+                                                fontWeight: '600',
+                                                transition: 'transform 0.3s ease'
                                             }}>
-                                                {t('projects.viewProject')} <span>→</span>
+                                                {t('projects.viewProject')} <span style={{ transition: 'transform 0.3s ease' }}>→</span>
                                             </span>
                                         </div>
                                     </div>
@@ -246,34 +300,79 @@ const Projects = () => {
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                                 {inProgressProjects.map((project, index) => (
                                     <div key={index}
+                                        className="card-hover"
                                         style={{
                                             ...cardStyle,
                                             cursor: (project.externalLink || project.internalLink) ? 'pointer' : 'default',
-                                            transition: 'transform 0.3s ease, border-color 0.3s ease'
+                                            animation: `fadeIn 0.6s ease-out ${index * 0.1}s both`,
+                                            position: 'relative'
                                         }}
                                         onClick={() => {
                                             if (project.internalLink) handleCardClick(project.internalLink, true);
                                             else handleCardClick(project.externalLink);
                                         }}
-                                        onMouseEnter={handleMouseEnter}
-                                        onMouseLeave={handleMouseLeave}
+                                        onMouseEnter={(e) => {
+                                            handleMouseEnter(e);
+                                            if (project.externalLink || project.internalLink) {
+                                                const arrow = e.currentTarget.querySelector('.arrow-icon');
+                                                if (arrow) arrow.style.transform = 'translateX(5px)';
+                                            }
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            handleMouseLeave(e);
+                                            const arrow = e.currentTarget.querySelector('.arrow-icon');
+                                            if (arrow) arrow.style.transform = 'translateX(0)';
+                                        }}
                                     >
-                                        <div style={{ padding: '2rem', flex: 1 }}>
+                                        <div style={{ 
+                                            padding: '2.5rem', 
+                                            flex: 1,
+                                            background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                        }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                                                <h3 style={{ fontSize: '1.5rem', marginBottom: 0 }}>{project.title}</h3>
+                                                <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{project.title}</h3>
+                                                {(project.externalLink || project.internalLink) && (
+                                                    <span style={{ 
+                                                        color: 'var(--accent-color)', 
+                                                        fontSize: '1.5rem',
+                                                        transition: 'transform 0.3s ease'
+                                                    }}>
+                                                        🔗
+                                                    </span>
+                                                )}
                                             </div>
-                                            <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', marginBottom: '1rem', fontWeight: '600' }}>
+                                            <p style={{ color: 'var(--accent-color)', fontSize: '1rem', marginBottom: '1rem', fontWeight: '600' }}>
                                                 {project.role}
                                             </p>
-                                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.7' }}>
                                                 {project.description}
                                             </p>
-                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                                                 {project.tags.map((tag, i) => (
                                                     <span key={i} style={tagStyle}>{tag}</span>
                                                 ))}
                                             </div>
                                         </div>
+                                        {(project.externalLink || project.internalLink) && (
+                                            <div style={{
+                                                padding: '1.5rem 2.5rem',
+                                                background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                                                display: 'flex',
+                                                justifyContent: 'flex-end',
+                                                borderTop: '1px solid var(--border-color)'
+                                            }}>
+                                                <span style={{
+                                                    color: 'var(--accent-color)',
+                                                    fontSize: '1rem',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '0.5rem',
+                                                    fontWeight: '600'
+                                                }}>
+                                                    {t('projects.viewProject')} <span className="arrow-icon" style={{ transition: 'transform 0.3s ease' }}>→</span>
+                                                </span>
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </div>
@@ -285,31 +384,36 @@ const Projects = () => {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         {education.map((edu, index) => (
                             <div key={index}
+                                className="card-hover"
                                 style={{
                                     ...cardStyle,
                                     cursor: edu.link ? 'pointer' : 'default',
-                                    transition: 'transform 0.3s ease, border-color 0.3s ease'
+                                    animation: `fadeIn 0.6s ease-out ${index * 0.1}s both`
                                 }}
                                 onClick={() => handleCardClick(edu.link)}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <div style={{ padding: '2rem', flex: 1 }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.5rem' }}>
-                                        <h3 style={{ fontSize: '1.5rem', marginBottom: 0 }}>{edu.institution}</h3>
+                                <div style={{ 
+                                    padding: '2.5rem', 
+                                    flex: 1,
+                                    background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.75rem' }}>
+                                        <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{edu.institution}</h3>
                                         {edu.link && (
-                                            <span style={{ color: 'var(--accent-color)' }}>
+                                            <span style={{ color: 'var(--accent-color)', fontSize: '1.5rem' }}>
                                                 📄
                                             </span>
                                         )}
                                     </div>
-                                    <p style={{ color: 'var(--accent-color)', fontSize: '1rem', marginBottom: '1rem', fontWeight: '600' }}>
+                                    <p style={{ color: 'var(--accent-color)', fontSize: '1.1rem', marginBottom: '1rem', fontWeight: '600' }}>
                                         {edu.degree}
                                     </p>
-                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.7' }}>
                                         {edu.description}
                                     </p>
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                                         {edu.tags.map((tag, i) => (
                                             <span key={i} style={tagStyle}>{tag}</span>
                                         ))}
@@ -317,17 +421,19 @@ const Projects = () => {
                                 </div>
                                 {edu.link && (
                                     <div style={{
-                                        padding: '1rem 2rem',
-                                        background: 'rgba(0,0,0,0.2)',
+                                        padding: '1.5rem 2.5rem',
+                                        background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
                                         display: 'flex',
-                                        justifyContent: 'flex-end'
+                                        justifyContent: 'flex-end',
+                                        borderTop: '1px solid var(--border-color)'
                                     }}>
                                         <span style={{
-                                            color: 'var(--text-primary)',
-                                            fontSize: '0.9rem',
+                                            color: 'var(--accent-color)',
+                                            fontSize: '1rem',
                                             display: 'flex',
                                             alignItems: 'center',
-                                            gap: '0.5rem'
+                                            gap: '0.5rem',
+                                            fontWeight: '600'
                                         }}>
                                             Ler PDF <span>→</span>
                                         </span>
@@ -343,8 +449,14 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" style={{ padding: '4rem 1rem' }}>
-            <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Portfólio & Carreira</h2>
+        <section id="projects" style={{ padding: '5rem 1rem', position: 'relative' }}>
+            <h2 className="text-gradient" style={{ 
+                textAlign: 'center', 
+                marginBottom: '3rem',
+                fontSize: 'clamp(2rem, 4vw, 3rem)'
+            }}>
+                Portfólio & Carreira
+            </h2>
 
             <div style={{
                 display: 'flex',

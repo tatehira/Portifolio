@@ -20,8 +20,19 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-            <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--accent-color)' }}>
+        <header className={`header ${isScrolled ? 'scrolled' : ''}`} style={{
+            backdropFilter: isScrolled ? 'blur(20px)' : 'none',
+            WebkitBackdropFilter: isScrolled ? 'blur(20px)' : 'none'
+        }}>
+            <div style={{ 
+                fontSize: '1.5rem', 
+                fontWeight: 'bold', 
+                color: 'var(--accent-color)',
+                background: 'linear-gradient(135deg, var(--accent-color), var(--accent-secondary))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+            }}>
                 Nick<span style={{ color: 'var(--text-primary)' }}>Tatehira</span>
             </div>
 
