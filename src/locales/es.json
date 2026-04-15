@@ -37,6 +37,32 @@
         "agrixDesc": "Software de gestión agropecuaria. Actúo como responsable de los módulos agrícola y ganadero, implementando reglas de negocio críticas para el sector.",
         "debtDesc": "Sistema de control y gestión de deudas desarrollado en colaboración con RomeraSCR. Permite la gestión de cuentas y control de cuotas."
     },
+    "simulations": {
+        "title": "Red de Simulaciones",
+        "subtitle": "Herramientas de precisión para sus decisiones financieras.",
+        "tab": "Financiamiento de Vehículos",
+        "comingSoon": "Próximamente...",
+        "loading": "Buscando...",
+        "financing": {
+            "tab": "Financiamiento",
+            "type": "Tipo de Vehículo",
+            "car": "Coche",
+            "moto": "Moto",
+            "condition": "Condición",
+            "new": "Nuevo",
+            "used": "Usado",
+            "value": "Valor del Bien",
+            "entry": "Entrada",
+            "rate": "Tasa de Interés",
+            "fetchBCB": "Buscar en BCB",
+            "simulate": "Simular Ahora",
+            "financed": "Valor Financiado",
+            "monthlyRateLabel": "Interés Mensual",
+            "months": "meses",
+            "errorEntry": "La entrada no pode ser mayor o igual al valor del bien.",
+            "errorRate": "Por favor, ingrese una tasa válida."
+        }
+    },
     "footer": {
         "title": "¿Hablamos?",
         "description": "Siempre estoy abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente o simplemente quieres charlar, ¡contáctame!",

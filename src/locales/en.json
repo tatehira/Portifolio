@@ -37,6 +37,32 @@
         "agrixDesc": "Agricultural management software. I act as responsible for agricultural and livestock modules, implementing critical business rules for the sector.",
         "debtDesc": "Debt control and management system developed in partnership with RomeraSCR. Allows account management and installment control."
     },
+    "simulations": {
+        "title": "Simulation Network",
+        "subtitle": "Precision tools for your financial decisions.",
+        "tab": "Vehicle Financing",
+        "comingSoon": "Coming Soon...",
+        "loading": "Fetching...",
+        "financing": {
+            "tab": "Financing",
+            "type": "Vehicle Type",
+            "car": "Car",
+            "moto": "Motorcycle",
+            "condition": "Condition",
+            "new": "New",
+            "used": "Used",
+            "value": "Asset Value",
+            "entry": "Down Payment",
+            "rate": "Interest Rate",
+            "fetchBCB": "Fetch from BCB",
+            "simulate": "Simulate Now",
+            "financed": "Financed Amount",
+            "monthlyRateLabel": "Monthly Interest",
+            "months": "months",
+            "errorEntry": "The down payment cannot be greater than or equal to the asset value.",
+            "errorRate": "Please enter a valid rate."
+        }
+    },
     "footer": {
         "title": "Let's Talk?",
         "description": "I am always open to new opportunities and partnerships. If you have a project in mind or just want to chat, get in touch!",

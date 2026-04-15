@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import GoldManagement from './pages/GoldManagement';
 import BarberShop from './pages/BarberShop';
+import SimulationNetwork from './pages/SimulationNetwork';
 
 const MainContent = () => (
   <>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<MainContent />} />
           <Route path="/gold-management" element={<GoldManagement />} />
           <Route path="/barber-shop" element={<BarberShop />} />
+          <Route path="/simulations" element={<SimulationNetwork />} />
         </Routes>
       </div>
     </Router>

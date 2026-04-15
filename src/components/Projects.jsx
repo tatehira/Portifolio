@@ -35,6 +35,13 @@ const Projects = () => {
 
     const inProgressProjects = [
         {
+            title: "Rede de Simulações",
+            description: "Uma plataforma integrada de simuladores financeiros e de lógica. O primeiro módulo foca em simulações realistas de financiamento veicular com integração direta ao Banco Central.",
+            role: "Full Stack Developer",
+            internalLink: "/simulations",
+            tags: ["Simulação", "Financeiro", "Analytics", "Vite"]
+        },
+        {
             title: "Sistema de Gestão de Ouro",
             description: "Sistema completo para gerenciamento de compra, venda e estoque de ouro. (Em desenvolvimento)",
             role: "Full Stack Developer",
