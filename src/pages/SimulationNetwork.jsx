@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import html2canvas from 'html2canvas';
 
 const SimulationNetwork = () => {
     const { t, i18n } = useTranslation();
     const navigate = useNavigate();
-    const [activeSimulation, setActiveSimulation] = useState('financing'); // 'financing' as default
+    const resultsRef = React.useRef(null);
+    const [activeSimulation, setActiveSimulation] = useState('financing');
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Financing States
     const [vehicleType, setVehicleType] = useState('carro');
@@ -103,8 +109,31 @@ const SimulationNetwork = () => {
         setResults({
             principal,
             monthlyRate: monthlyRate * 100,
-            simulations: simulationResults
+            simulations: simulationResults,
+            date: new Date().toLocaleDateString(i18n.language === 'pt' ? 'pt-BR' : 'en-US')
         });
+    };
+
+    const handleExportImage = async () => {
+        if (!resultsRef.current) return;
+        
+        try {
+            const canvas = await html2canvas(resultsRef.current, {
+                backgroundColor: '#0a0e1a',
+                scale: 2,
+                logging: false,
+                useCORS: true
+            });
+            
+            const image = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.href = image;
+            link.download = `simulacao-tatehira-${new Date().getTime()}.png`;
+            link.click();
+        } catch (error) {
+            console.error('Export error:', error);
+            alert('Erro ao gerar imagem para exportação.');
+        }
     };
 
     const containerStyle = {
@@ -119,10 +148,10 @@ const SimulationNetwork = () => {
         backdropFilter: 'blur(20px)',
         border: '1px solid var(--border-color)',
         borderRadius: '24px',
-        padding: '2.5rem',
+        padding: isMobile ? '1.5rem' : '2.5rem',
         boxShadow: 'var(--shadow-lg)',
         maxWidth: '800px',
-        margin: '2rem auto'
+        margin: isMobile ? '1rem auto' : '2rem auto'
     };
 
     const inputStyle = {
@@ -130,11 +159,13 @@ const SimulationNetwork = () => {
         background: 'rgba(10, 14, 26, 0.8)',
         border: '1px solid var(--border-color)',
         borderRadius: '12px',
-        padding: '0.8rem 1rem',
+        padding: isMobile ? '1rem' : '0.8rem 1rem',
         color: 'var(--text-primary)',
-        fontSize: '1rem',
+        fontSize: isMobile ? '1.1rem' : '1rem',
         outline: 'none',
-        transition: 'border-color 0.3s ease'
+        transition: 'border-color 0.3s ease',
+        appearance: 'none',
+        WebkitAppearance: 'none'
     };
 
     const labelStyle = {
@@ -181,7 +212,7 @@ const SimulationNetwork = () => {
 
                 {activeSimulation === 'financing' && (
                     <div style={cardStyle} className="fade-in">
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
                             <div>
                                 <label style={labelStyle}>{t('simulations.financing.type', 'Tipo de Veículo')}</label>
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', background: 'rgba(0,0,0,0.2)', padding: '4px', borderRadius: '12px' }}>
@@ -218,7 +249,7 @@ const SimulationNetwork = () => {
                             </div>
                         </div>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
                             <div>
                                 <label style={labelStyle}>{t('simulations.financing.value', 'Valor do Bem')}</label>
                                 <input 
@@ -287,7 +318,11 @@ const SimulationNetwork = () => {
                         </button>
 
                         {results && (
-                            <div className="slide-in-up" style={{ marginTop: '2.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem' }}>
+                            <div className="slide-in-up" ref={resultsRef} style={{ marginTop: '2.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem', background: '#0a0e1a', borderRadius: '16px', padding: isMobile ? '1rem' : '1.5rem' }}>
+                                <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                                    <h3 style={{ fontSize: '1rem', color: 'var(--accent-color)', marginBottom: '0.2rem' }}>Tatehira Sistemas</h3>
+                                    <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>{results.date}</div>
+                                </div>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
                                     <div style={{ textAlign: 'center', flex: 1 }}>
                                         <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
@@ -325,6 +360,14 @@ const SimulationNetwork = () => {
                                         </div>
                                     ))}
                                 </div>
+                                
+                                <button 
+                                    className="btn-outline"
+                                    style={{ width: '100%', marginTop: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+                                    onClick={handleExportImage}
+                                >
+                                    <span>📸</span> {t('simulations.financing.shareImage', 'Compartilhar como Imagem')}
+                                </button>
                             </div>
                         )}
                     </div>
