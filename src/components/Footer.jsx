@@ -104,7 +104,7 @@ const Footer = () => {
                     opacity: 0.9,
                     padding: '0.75rem 1.5rem',
                     borderRadius: '1rem',
-                    background: 'rgba(56, 189, 248, 0.05)',
+                    background: 'rgba(245, 158, 11, 0.05)',
                     border: '1px solid var(--border-color)'
                 }}>
                     <span>Developed by</span>
@@ -120,7 +120,7 @@ const Footer = () => {
                         style={{ 
                             height: '24px', 
                             width: 'auto',
-                            filter: 'drop-shadow(0 0 8px rgba(56, 189, 248, 0.5))'
+                            filter: 'drop-shadow(0 0 8px rgba(245, 158, 11, 0.5))'
                         }} 
                     />
                 </div>

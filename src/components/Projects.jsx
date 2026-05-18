@@ -9,17 +9,42 @@ const Projects = () => {
 
     const experiences = [
         {
-            company: "LBRIT",
-            role: "Desenvolvedor",
-            description: "Software de gerenciamento completo para agricultura e pecuária",
-            link: "https://lbrit.com.br/agrix-gestao-agro/#modulos-pecuaria",
-            tags: ["Pecuária", "Sistema Corporativo", "Desenvolvimento", "Enterprise"]
+            company: t('experiences.cge.company', "CGE-MT"),
+            role: t('experiences.cge.role', "Engenheiro de Computação Sênior / Supervisor de Desenvolvimento"),
+            description: t('experiences.cge.description', "Responsável pelo acompanhamento técnico e supervisão estratégica do time de desenvolvimento de sistemas governamentais. Atuação na liderança técnica, definição de padrões de arquitetura de software, auditoria de qualidade de código e alinhamento de processos ágeis para a Controladoria Geral do Estado."),
+            period: t('experiences.cge.period', "Desde Maio de 2026"),
+            link: "https://www.cge.mt.gov.br/",
+            tags: [
+                t('experiences.cge.tag1', "Liderança"),
+                t('experiences.cge.tag2', "Arquitetura"),
+                t('experiences.cge.tag3', "Supervisão"),
+                t('experiences.cge.tag4', "Governo")
+            ]
         },
         {
-            company: "Teleturbo Telecomunicações",
-            role: "Analista de Redes",
-            description: "Analista de redes focado em documentação FTTH e gerenciamento de ONT. Intensa atuação com suporte técnico envolvendo configuração de portas de roteador, NAT, e resolução de problemas de conectividade.",
-            tags: ["Redes", "FTTH", "ONT", "Suporte", "NAT"]
+            company: t('experiences.lbrit.company', "LBRIT"),
+            role: t('experiences.lbrit.role', "Engenheiro de Software Sênior"),
+            description: t('experiences.lbrit.description', "Atuação no desenvolvimento de software de alta complexidade para o setor de gestão agropecuária (software Agrix). Responsável por liderar a implementação de regras de negócio críticas nos módulos agrícola e pecuária, focando em performance de banco de dados e escalabilidade enterprise."),
+            period: t('experiences.lbrit.period', "Dezembro de 2022 - Maio de 2026"),
+            link: "https://lbrit.com.br/agrix-gestao-agro/#modulos-pecuaria",
+            tags: [
+                t('experiences.lbrit.tag1', "Pecuária"),
+                t('experiences.lbrit.tag2', "Sistemas Corporativos"),
+                t('experiences.lbrit.tag3', "Enterprise"),
+                t('experiences.lbrit.tag4', "Desenvolvimento")
+            ]
+        },
+        {
+            company: t('experiences.teleturbo.company', "Teleturbo Telecomunicações"),
+            role: t('experiences.teleturbo.role', "Analista de Redes"),
+            description: t('experiences.teleturbo.description', "Analista de redes focado em documentação FTTH e gerenciamento de ONT. Intensa atuação com suporte técnico envolvendo configuração de portas de roteador, NAT, e resolução de problemas de conectividade."),
+            period: t('experiences.teleturbo.period', "2 anos de experiência"),
+            tags: [
+                t('experiences.teleturbo.tag1', "Redes"),
+                t('experiences.teleturbo.tag2', "FTTH"),
+                t('experiences.teleturbo.tag3', "ONT"),
+                t('experiences.teleturbo.tag4', "Suporte")
+            ]
         }
     ];
 
@@ -93,13 +118,13 @@ const Projects = () => {
     };
 
     const tagStyle = {
-        background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(139, 92, 246, 0.15))',
+        background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.15))',
         color: 'var(--accent-color)',
         padding: '0.4rem 1rem',
         borderRadius: '1rem',
         fontSize: '0.85rem',
         fontWeight: '500',
-        border: '1px solid rgba(56, 189, 248, 0.2)',
+        border: '1px solid rgba(245, 158, 11, 0.2)',
         transition: 'all 0.3s ease'
     };
 
@@ -107,7 +132,7 @@ const Projects = () => {
         padding: '0.875rem 2rem',
         borderRadius: '2rem',
         background: isActive 
-            ? 'linear-gradient(135deg, #0ea5e9, #38bdf8)' 
+            ? 'linear-gradient(135deg, var(--accent-hover), var(--accent-color))' 
             : 'transparent',
         color: isActive ? '#ffffff' : 'var(--text-secondary)',
         border: isActive ? 'none' : '1px solid var(--border-color)',
@@ -115,7 +140,7 @@ const Projects = () => {
         fontWeight: '700',
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         fontSize: '1rem',
-        boxShadow: isActive ? '0 4px 15px rgba(56, 189, 248, 0.3)' : 'none',
+        boxShadow: isActive ? '0 4px 15px rgba(245, 158, 11, 0.35)' : 'none',
         position: 'relative',
         overflow: 'hidden',
         textShadow: isActive ? '0 1px 2px rgba(0, 0, 0, 0.2)' : 'none'
@@ -133,7 +158,7 @@ const Projects = () => {
     const handleMouseEnter = (e) => {
         e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
         e.currentTarget.style.borderColor = 'var(--accent-color)';
-        e.currentTarget.style.boxShadow = '0 12px 40px rgba(56, 189, 248, 0.25)';
+        e.currentTarget.style.boxShadow = '0 12px 40px rgba(245, 158, 11, 0.25)';
     };
 
     const handleMouseLeave = (e) => {
@@ -162,7 +187,7 @@ const Projects = () => {
                                 <div style={{ 
                                     padding: '2.5rem',
                                     position: 'relative',
-                                    background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                    background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%)'
                                 }}>
                                     <div style={{ 
                                         position: 'absolute',
@@ -173,17 +198,32 @@ const Projects = () => {
                                         background: 'linear-gradient(180deg, var(--accent-color), var(--accent-secondary))',
                                         borderRadius: '0 4px 4px 0'
                                     }} />
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.75rem', paddingLeft: '1rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem', paddingLeft: '1rem', flexWrap: 'wrap', gap: '0.5rem' }}>
                                         <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{exp.company}</h3>
-                                        {exp.link && (
-                                            <span style={{ 
-                                                color: 'var(--accent-color)',
-                                                fontSize: '1.5rem',
-                                                transition: 'transform 0.3s ease'
-                                            }}>
-                                                🔗
-                                            </span>
-                                        )}
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                            {exp.period && (
+                                                <span style={{ 
+                                                    color: 'var(--text-secondary)', 
+                                                    fontSize: '0.85rem', 
+                                                    fontWeight: '600',
+                                                    background: 'rgba(245, 158, 11, 0.08)',
+                                                    padding: '0.25rem 0.6rem',
+                                                    borderRadius: '0.5rem',
+                                                    border: '1px solid rgba(245, 158, 11, 0.15)'
+                                                }}>
+                                                    {exp.period}
+                                                </span>
+                                            )}
+                                            {exp.link && (
+                                                <span style={{ 
+                                                    color: 'var(--accent-color)',
+                                                    fontSize: '1.2rem',
+                                                    transition: 'transform 0.3s ease'
+                                                }}>
+                                                    🔗
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
                                     <p style={{ 
                                         color: 'var(--accent-color)', 
@@ -244,7 +284,7 @@ const Projects = () => {
                                         <div style={{ 
                                             padding: '2.5rem', 
                                             flex: 1,
-                                            background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                            background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%)'
                                         }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
                                                 <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{project.title}</h3>
@@ -272,7 +312,7 @@ const Projects = () => {
                                         </div>
                                         <div style={{
                                             padding: '1.5rem 2.5rem',
-                                            background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                                            background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%)',
                                             display: 'flex',
                                             justifyContent: 'flex-end',
                                             borderTop: '1px solid var(--border-color)'
@@ -334,7 +374,7 @@ const Projects = () => {
                                         <div style={{ 
                                             padding: '2.5rem', 
                                             flex: 1,
-                                            background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                            background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%)'
                                         }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
                                                 <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{project.title}</h3>
@@ -363,7 +403,7 @@ const Projects = () => {
                                         {(project.externalLink || project.internalLink) && (
                                             <div style={{
                                                 padding: '1.5rem 2.5rem',
-                                                background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                                                background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%)',
                                                 display: 'flex',
                                                 justifyContent: 'flex-end',
                                                 borderTop: '1px solid var(--border-color)'
@@ -404,7 +444,7 @@ const Projects = () => {
                                 <div style={{ 
                                     padding: '2.5rem', 
                                     flex: 1,
-                                    background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%)'
+                                    background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%)'
                                 }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.75rem' }}>
                                         <h3 style={{ fontSize: '1.75rem', marginBottom: 0, fontWeight: '700' }}>{edu.institution}</h3>
@@ -429,7 +469,7 @@ const Projects = () => {
                                 {edu.link && (
                                     <div style={{
                                         padding: '1.5rem 2.5rem',
-                                        background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                                        background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%)',
                                         display: 'flex',
                                         justifyContent: 'flex-end',
                                         borderTop: '1px solid var(--border-color)'

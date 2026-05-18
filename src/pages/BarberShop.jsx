@@ -131,8 +131,8 @@ const BarberShop = () => {
                 </h1>
 
                 <div style={{
-                    background: 'rgba(56, 189, 248, 0.1)',
-                    border: '1px solid rgba(56, 189, 248, 0.5)',
+                    background: 'rgba(245, 158, 11, 0.1)',
+                    border: '1px solid rgba(245, 158, 11, 0.5)',
                     color: 'var(--accent-color)',
                     padding: '1rem',
                     borderRadius: '0.5rem',

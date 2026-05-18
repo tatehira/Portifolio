@@ -7,20 +7,52 @@
   },
   "hero": {
     "greeting": "Olá, eu sou",
-    "role": "Desenvolvedor de Software",
-    "description": "Especialista em transformar regras de negócio complexas em soluções de software robustas. Focado em segurança, performance e experiência do usuário.",
+    "role": "Engenheiro de Computação Sênior | Líder Técnico",
+    "description": "Engenheiro de Computação Sênior focado em liderança técnica, arquitetura de sistemas corporativos e governança de TI. Atuo no acompanhamento e orientação de equipes de desenvolvimento na Controladoria Geral do Estado de Mato Grosso, assegurando entregas escaláveis, seguras e eficientes.",
     "viewProjects": "Ver Projetos",
     "contactMe": "Entre em Contato"
   },
   "about": {
     "title": "Sobre Mim",
-    "bio": "Sou um Desenvolvedor Full Stack e Engenheiro de Computação apaixonado por tecnologia. Atuo no desenvolvimento de sistemas corporativos, sempre prezando pela qualidade de código e entrega de valor. Tenho grande interesse em arquitetura de software e gosto de entender como as coisas funcionam nos bastidores, desde o alto nível até a infraestrutura. Além disso, minha experiência em redes complementa minha visão técnica, permitindo criar soluções mais robustas e integradas."
+    "bio": "Sou Engenheiro de Computação Sênior focado no desenvolvimento e supervisão técnica de sistemas corporativos de alta complexidade. Atualmente, desempenho o papel de líder de desenvolvimento e supervisor técnico na Controladoria Geral do Estado de Mato Grosso (CGE-MT), sendo responsável pelo acompanhamento de equipes, garantia de padrões arquiteturais e qualidade de entrega. Minha formação em Engenharia de Computação e Cibersegurança, aliada à vivência em arquitetura de software e infraestrutura de redes, me permite conduzir projetos com foco em governança tecnológica, conformidade e segurança da informação."
   },
   "projects": {
     "title": "Meus Projetos",
     "viewProject": "Ver Projeto",
     "agrixDesc": "Software de gestão agropecuária. Atuo como responsável pelos módulos agrícola e pecuária, implementando regras de negócio críticas para o setor.",
     "debtDesc": "Sistema de controle e gestão de dívidas desenvolvido em parceria com RomeraSCR. Permite gerenciamento de contas e controle de parcelas."
+  },
+  "experiences": {
+    "cge": {
+      "company": "Controladoria Geral do Estado de Mato Grosso",
+      "role": "Engenheiro de Computação Sênior / Supervisor de Desenvolvimento",
+      "description": "Responsável pelo acompanhamento técnico e supervisão do time de desenvolvimento de sistemas governamentais. Atuação na liderança técnica, definição de padrões de arquitetura de software, auditoria de qualidade de código e alinhamento de processos ágeis para a Controladoria Geral do Estado de Mato Grosso.",
+      "period": "Desde Maio de 2026",
+      "tag1": "Liderança",
+      "tag2": "Arquitetura",
+      "tag3": "Supervisão",
+      "tag4": "Governo"
+    },
+    "lbrit": {
+      "company": "LBRIT",
+      "role": "Engenheiro de Software Sênior",
+      "description": "Atuação no desenvolvimento de software de alta complexidade para o setor de gestão agropecuária (software Agrix). Responsável por liderar a implementação de regras de negócio críticas nos módulos agrícola e pecuária, focando em performance de banco de dados e escalabilidade enterprise.",
+      "period": "Dezembro de 2022 - Maio de 2026",
+      "tag1": "Pecuária",
+      "tag2": "Sistemas Corporativos",
+      "tag3": "Enterprise",
+      "tag4": "Desenvolvimento"
+    },
+    "teleturbo": {
+      "company": "Teleturbo Telecomunicações",
+      "role": "Analista de Redes",
+      "description": "Analista de redes focado em documentação FTTH e gerenciamento de ONT. Intensa atuação com suporte técnico envolvendo configuração de portas de roteador, NAT, e resolução de problemas de conectividade.",
+      "period": "2 anos de experiência",
+      "tag1": "Redes",
+      "tag2": "FTTH",
+      "tag3": "ONT",
+      "tag4": "Suporte"
+    }
   },
   "simulations": {
     "title": "Rede de Simulações",

@@ -7,13 +7,14 @@
     },
     "hero": {
         "greeting": "Hi, I am",
-        "role": "Full Stack Developer & Network Analyst",
-        "description": "Specialist in transforming complex business rules into robust software solutions. Focused on security, performance, and user experience.",
+        "role": "Senior Computer Engineer & Tech Lead",
+        "description": "Senior Computer Engineer focused on technical leadership, enterprise systems architecture, and IT governance. Guided by the goal of supporting development teams at the Controladoria Geral do Estado de Mato Grosso, ensuring scalable, secure, and efficient deliveries.",
         "viewProjects": "View Projects",
         "contactMe": "Get in Touch"
     },
     "about": {
         "title": "About Me",
+        "bio": "I am a Senior Computer Engineer focused on the development and technical supervision of highly complex enterprise systems. Currently, I serve as a Tech Lead and Technical Supervisor at the Controladoria Geral do Estado de Mato Grosso (CGE-MT), where I am responsible for team support, architectural standards compliance, and quality of delivery. My background in Computer Engineering and Cybersecurity, combined with expertise in software architecture and network infrastructure, allows me to drive projects focused on technological governance, compliance, and information security.",
         "experience": "Professional Experience",
         "devRole": "Full Stack Developer",
         "current": "LBR.IT • Since December 2022",
@@ -36,6 +37,38 @@
         "viewProject": "View Project",
         "agrixDesc": "Agricultural management software. I act as responsible for agricultural and livestock modules, implementing critical business rules for the sector.",
         "debtDesc": "Debt control and management system developed in partnership with RomeraSCR. Allows account management and installment control."
+    },
+    "experiences": {
+        "cge": {
+            "company": "Controladoria Geral do Estado de Mato Grosso",
+            "role": "Senior Computer Engineer / Development Supervisor",
+            "description": "Responsible for technical oversight and supervision of the government systems development team. Acting in technical leadership, definition of software architecture standards, code quality auditing, and alignment of agile processes for the Controladoria Geral do Estado de Mato Grosso.",
+            "period": "Since May 2026",
+            "tag1": "Leadership",
+            "tag2": "Architecture",
+            "tag3": "Oversight",
+            "tag4": "Government"
+        },
+        "lbrit": {
+            "company": "LBRIT",
+            "role": "Senior Software Engineer",
+            "description": "Experience developing high-complexity software for the agricultural management sector (Agrix software). Responsible for leading the implementation of critical business rules in agricultural and livestock modules, focusing on database performance and enterprise scalability.",
+            "period": "December 2022 - May 2026",
+            "tag1": "Livestock",
+            "tag2": "Corporate Systems",
+            "tag3": "Enterprise",
+            "tag4": "Development"
+        },
+        "teleturbo": {
+            "company": "Teleturbo Telecomunicações",
+            "role": "Network Analyst",
+            "description": "Network analyst focused on FTTH documentation and ONT management. Intense activity with technical support involving router port configuration, NAT, and troubleshooting connectivity issues.",
+            "period": "2 years of experience",
+            "tag1": "Networks",
+            "tag2": "FTTH",
+            "tag3": "ONT",
+            "tag4": "Support"
+        }
     },
     "simulations": {
         "title": "Simulation Network",

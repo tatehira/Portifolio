@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import html2canvas from 'html2canvas';
@@ -119,7 +122,7 @@ const SimulationNetwork = () => {
         
         try {
             const canvas = await html2canvas(resultsRef.current, {
-                backgroundColor: '#0a0e1a',
+                backgroundColor: '#080c14',
                 scale: 2,
                 logging: false,
                 useCORS: true
@@ -281,7 +284,7 @@ const SimulationNetwork = () => {
                                     onClick={fetchBCBRate}
                                     disabled={isLoading}
                                     style={{ 
-                                        background: 'rgba(56, 189, 248, 0.1)', border: '1px solid var(--accent-color)', borderRadius: '20px', 
+                                        background: 'rgba(245, 158, 11, 0.1)', border: '1px solid var(--accent-color)', borderRadius: '20px', 
                                         padding: '4px 12px', fontSize: '0.7rem', color: 'var(--accent-color)', cursor: 'pointer', fontWeight: '700',
                                         transition: 'all 0.3s ease'
                                     }}
@@ -318,7 +321,7 @@ const SimulationNetwork = () => {
                         </button>
 
                         {results && (
-                            <div className="slide-in-up" ref={resultsRef} style={{ marginTop: '2.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem', background: '#0a0e1a', borderRadius: '16px', padding: isMobile ? '1rem' : '1.5rem' }}>
+                            <div className="slide-in-up" ref={resultsRef} style={{ marginTop: '2.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem', background: '#080c14', borderRadius: '16px', padding: isMobile ? '1rem' : '1.5rem' }}>
                                 <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                     <h3 style={{ fontSize: '1rem', color: 'var(--accent-color)', marginBottom: '0.2rem' }}>Tatehira Sistemas</h3>
                                     <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>{results.date}</div>
@@ -347,8 +350,8 @@ const SimulationNetwork = () => {
                                         <div 
                                             key={idx} 
                                             style={{ 
-                                                background: 'rgba(56, 189, 248, 0.05)', borderRadius: '16px', padding: '1rem', 
-                                                textAlign: 'center', border: '1px solid rgba(56, 189, 248, 0.1)' 
+                                                background: 'rgba(245, 158, 11, 0.05)', borderRadius: '16px', padding: '1rem', 
+                                                textAlign: 'center', border: '1px solid rgba(245, 158, 11, 0.1)' 
                                             }}
                                         >
                                             <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.4rem' }}>

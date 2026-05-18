@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  --bg-color: #0a0e1a;
-  --card-bg: #1a1f2e;
+  --bg-color: #080c14;
+  --card-bg: #111a2e;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --accent-color: #38bdf8;
-  --accent-hover: #0ea5e9;
-  --accent-secondary: #8b5cf6;
-  --nav-bg: rgba(10, 14, 26, 0.95);
-  --border-color: rgba(56, 189, 248, 0.2);
+  --accent-color: #f59e0b;
+  --accent-hover: #d97706;
+  --accent-secondary: #fbbf24;
+  --nav-bg: rgba(8, 12, 20, 0.95);
+  --border-color: rgba(245, 158, 11, 0.15);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.3);
+  --shadow-glow: 0 0 20px rgba(245, 158, 11, 0.25);
 }
 
 * {
@@ -26,10 +26,10 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   background-image:
-    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.2) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.2) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(217, 119, 6, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(217, 119, 6, 0.1) 0px, transparent 50%);
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
@@ -45,8 +45,8 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -86,7 +86,7 @@ h2 {
 .btn {
   display: inline-block;
   padding: 0.875rem 2rem;
-  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent-color));
   color: #ffffff !important;
   font-weight: 800;
   border-radius: 0.75rem;
@@ -96,7 +96,7 @@ h2 {
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   letter-spacing: 0.5px;
 }
@@ -126,20 +126,19 @@ h2 {
 }
 
 .btn-outline {
-  background-color: transparent;
+  background: transparent;
   border: 2px solid var(--accent-color);
-  color: #ffffff !important;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.1);
+  color: var(--accent-color) !important;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
   font-weight: 800;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #0284c7, #0ea5e9);
 }
 
 .btn-outline:hover {
-  background: linear-gradient(135deg, #0369a1, #0284c7);
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent-color));
   color: #ffffff !important;
-  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
@@ -250,7 +249,7 @@ h2 {
   }
 
   .nav-links li a:hover {
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(245, 158, 11, 0.1);
     color: var(--accent-color);
   }
 
@@ -371,7 +370,7 @@ h2 {
 }
 
 .glow-text {
-  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
 }
 
 /* Language Switcher */
@@ -403,15 +402,15 @@ h2 {
 
 .card-hover:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 12px 40px rgba(245, 158, 11, 0.15);
 }
 
 /* Glass Morphism */
 .glass {
-  background: rgba(26, 31, 46, 0.7);
+  background: rgba(17, 26, 46, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.15);
 }
 
 /* Scrollbar Styling */

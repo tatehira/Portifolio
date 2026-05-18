@@ -2,32 +2,20 @@
     "header": {
         "home": "Inicio",
         "about": "Sobre Mí",
-        "projects": "Proyectos",
+        "projects": "Projetos",
         "contact": "Contacto"
     },
     "hero": {
         "greeting": "Hola, soy",
-        "role": "Desarrollador Full Stack y Analista de Redes",
-        "description": "Especialista en transformar reglas de negocio complejas en soluciones de software robustas. Centrado en la seguridad, el rendimiento y la experiencia del usuario.",
+        "role": "Ingeniero de Computación Senior | Líder Técnico",
+        "description": "Ingeniero de Computación Senior enfocado en liderazgo técnico, arquitectura de sistemas corporativos y gobernanza de TI. Dedicado a guiar y apoyar equipos de desarrollo en la Controladoria Geral del Estado de Mato Grosso, garantizando entregas escalables, seguras y eficientes.",
         "viewProjects": "Ver Proyectos",
         "contactMe": "Ponerse en Contacto"
     },
     "about": {
         "title": "Sobre Mí",
+        "bio": "Soy Ingeniero de Computación Senior enfocado en el desarrollo y supervisión técnica de sistemas corporativos de alta complejidad. Actualmente, me desempeño como líder de desarrollo y supervisor técnico en la Controladoria Geral del Estado de Mato Grosso (CGE-MT), donde soy responsable del seguimiento de los equipos, garantía de estándares arquitectónicos y calidad de entrega. Mi formación en Ingeniería de Computación y Ciberseguridad, aliada a una sólida vivencia en arquitectura de software e infraestructura de redes, me permite liderar proyectos enfocados en la gobernanza tecnológica, cumplimiento y seguridad de la información.",
         "experience": "Experiencia Profesional",
-        "devRole": "Desarrollador Full Stack",
-        "current": "LBR.IT • Desde Diciembre de 2022",
-        "devDesc": "Responsable de los módulos agrícola y ganadero del software Agrix. Desarrollo basado en reglas de negocio complejas para la gestión agropecuaria.",
-        "netRole": "Analista de Redes",
-        "netExp": "2 Años de Experiencia",
-        "netDesc": "Gestión y mantenimiento de infraestructura de redes, garantizando estabilidad y seguridad.",
-        "education": "Formación Académica",
-        "eduTitle": "Ciberseguridad",
-        "eduDesc": "Graduado con enfoque en seguridad de la información.",
-        "tccTitle": "Trabajo de Fin de Grado (TCC)",
-        "tccName": "\"Análisis de Ejecutables para Principiantes: Una Introducción a la Ingeniería Inversa\"",
-        "tccDesc": "Un estudio profundo sobre técnicas de ingeniería inversa dirigido a fines educativos y de seguridad.",
-        "readTcc": "Leer TCC (PDF)",
         "languages": "Idiomas",
         "langDesc": "Portugués (Nativo), Inglés (Básico), Español (Básico)"
     },
@@ -36,6 +24,38 @@
         "viewProject": "Ver Proyecto",
         "agrixDesc": "Software de gestión agropecuaria. Actúo como responsable de los módulos agrícola y ganadero, implementando reglas de negocio críticas para el sector.",
         "debtDesc": "Sistema de control y gestión de deudas desarrollado en colaboración con RomeraSCR. Permite la gestión de cuentas y control de cuotas."
+    },
+    "experiences": {
+        "cge": {
+            "company": "Controladoria Geral del Estado de Mato Grosso",
+            "role": "Ingeniero de Computación Senior / Supervisor de Desarrollo",
+            "description": "Responsable del seguimiento técnico y la supervisión del equipo de desarrollo de sistemas gubernamentales. Actuación en liderazgo técnico, definición de estándares de arquitectura de software, auditoría de calidad de código y alineación de procesos ágiles para la Controladoria Geral del Estado de Mato Grosso.",
+            "period": "Desde Mayo de 2026",
+            "tag1": "Liderazgo",
+            "tag2": "Arquitectura",
+            "tag3": "Supervisión",
+            "tag4": "Gobierno"
+        },
+        "lbrit": {
+            "company": "LBRIT",
+            "role": "Ingeniero de Software Senior",
+            "description": "Desarrollo de software de alta complejidad para el sector de gestión agropecuaria (software Agrix). Responsable de liderar la implementación de reglas de negocio críticas en los módulos agrícola y ganadero, enfocado en el rendimiento de base de datos y la escalabilidad empresarial.",
+            "period": "Diciembre de 2022 - Mayo de 2026",
+            "tag1": "Ganadería",
+            "tag2": "Sistemas Corporativos",
+            "tag3": "Empresarial",
+            "tag4": "Desarrollo"
+        },
+        "teleturbo": {
+            "company": "Teleturbo Telecomunicações",
+            "role": "Analista de Redes",
+            "description": "Analista de redes centrado en documentación FTTH y gestión de ONT. Intensa actividad con soporte técnico involucrando la configuración de puertos de router, NAT y resolución de problemas de conectividad.",
+            "period": "2 años de experiencia",
+            "tag1": "Redes",
+            "tag2": "FTTH",
+            "tag3": "ONT",
+            "tag4": "Soporte"
+        }
     },
     "simulations": {
         "title": "Red de Simulaciones",
